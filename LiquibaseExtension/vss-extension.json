@@ -1,0 +1,82 @@
+{
+  "manifestVersion": 1,
+  "id": "liquibase-extension",
+  "version": "0.1.0",
+  "name": "Liquibase Extension",
+  "scopes": [ "vso.work", "vso.code", "vso.build", "vso.packaging" ],
+  "description": "Liquibase is a framework aimed to manage database changes in a tracked and reproducible manner.  For details see [Liquibase homepage](http://www.liquibase.org).",
+  "publisher": "sedatguclu",
+  "public": false,
+  "icons": {
+    "default": "img/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "tags": [
+    "Sample"
+  ],
+  "links": {
+    "home": {
+      "uri": "https://bit.ly"
+    },
+    "getstarted": {
+      "uri": "https://bit.ly"
+    },
+    "learn": {
+      "uri": "https://bit.ly"
+    },
+    "support": {
+      "uri": "https://bit.ly"
+    },
+    "repository": {
+      "uri": "https://bit.ly"
+    },
+    "issues": {
+      "uri": "https://bit.ly"
+    }
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "files": [
+    {
+      "path": "css",
+      "addressable": true
+    },
+    {
+      "path": "img",
+      "addressable": true
+    },
+    {
+      "path": "scripts",
+      "addressable": true
+    },
+    {
+      "path": "tasks",
+      "addressable" :  true
+    },
+    {
+      "path": "index.html",
+      "addressable": true
+    }
+  ],
+  "categories": [
+    "Integrate"
+  ],
+  "contributions": [
+    {
+      "id": "getVersion",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "type": "ms.vss-distributed-task.task",
+      "properties": {
+        "name": "tasks/getVersion"
+      }
+    }
+  ]
+}
