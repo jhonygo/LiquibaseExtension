@@ -57,7 +57,7 @@
     },
     {
       "path": "tasks",
-      "addressable" :  true
+      "addressable" : true
     },
     {
       "path": "index.html",
