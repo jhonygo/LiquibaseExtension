@@ -48,8 +48,8 @@
     <Content Include="img\logo.png" />
     <Content Include="index.html" />
     <Content Include="scripts\VSS.SDK.js" />
-    <Content Include="tasks\getVersion\icon.png" />
-    <Content Include="tasks\getVersion\getVersion.js" />
+    <Content Include="taskVersion\icon.png" />
+    <Content Include="taskVersion\getVersion.js" />
     <Content Include="test\TestSpec.js" />
     <None Include="readme.md" />
     <None Include="package.json" />
@@ -62,8 +62,8 @@
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="tasks\getVersion\getVersion.ps1" />
-    <Content Include="tasks\getVersion\task.json" />
+    <Content Include="taskVersion\getVersion.ps1" />
+    <Content Include="taskVersion\task.json" />
     <None Include="vss-extension.json" />
     <None Include="settings.tfx.json" />
     <None Include="gruntfile.js" />

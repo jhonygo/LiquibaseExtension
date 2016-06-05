@@ -1,6 +1,6 @@
 {
   "id": "b97ccb20-29bd-11e6-8829-d59d39f3c3c4",
-  "name": "liquibaseVersion",
+  "name": "taskVersion",
   "friendlyName": "Liquibase version",
   "description": "Get installed Liquibase version",
   "author": "sedatifpcdeboiron",
