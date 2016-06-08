@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "liquibase-extension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "Liquibase Extension",
   "scopes": [ "vso.work", "vso.code", "vso.build", "vso.packaging" ],
   "description": "Liquibase extension for TFS",
@@ -47,13 +47,13 @@
   ],
   "contributions": [
     {
-      "id": "taskVersion",
+      "id": "version-task",
+      "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"
       ],
-      "type": "ms.vss-distributed-task.task",
       "properties": {
-        "name": "tasks/taskVersion"
+        "name": "tasks/TaskVersion"
       }
     }
   ]
