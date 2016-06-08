@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         settings: grunt.file.readJSON("settings.tfx.json"),
         exec: {
             package: {
-                command: "tfx extension create --manifest-globs LiquibaseExtension\vss-extension.json",
+                command: "tfx extension create --manifest-globs LiquibaseExtension\vss-extension.json --output-path LiquibaseExtension\bin",
                 stdout: true,
                 stderr: true
             },

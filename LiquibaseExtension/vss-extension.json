@@ -27,24 +27,19 @@
   },
   "files": [
     {
-      "path": "css",
-      "addressable": true
+      "path": "css"
     },
     {
-      "path": "img",
-      "addressable": true
+      "path": "img"
     },
     {
-      "path": "scripts",
-      "addressable": true
+      "path": "scripts"
     },
     {
-      "path": "taskVersion",
-      "addressable" : true
+      "path": "tasks"
     },
     {
-      "path": "index.html",
-      "addressable": true
+      "path": "index.html"
     }
   ],
   "categories": [
@@ -58,7 +53,7 @@
       ],
       "type": "ms.vss-distributed-task.task",
       "properties": {
-        "name": "taskVersion"
+        "name": "tasks/taskVersion"
       }
     }
   ]
