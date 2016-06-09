@@ -1,23 +1,21 @@
 {
   "manifestVersion": 1,
   "id": "liquibase-extension",
-  "version": "0.1.1",
   "name": "Liquibase Extension",
-  "scopes": [ "vso.work", "vso.code", "vso.build", "vso.packaging" ],
+  "version": "0.1.1",
+  "publisher": "sedatguclu",
   "description": "Liquibase extension for TFS",
   "overview" : "Liquibase is a framework aimed to manage database changes in a tracked and reproducible manner.  For details see [Liquibase homepage](http://www.liquibase.org).",
-  "publisher": "sedatguclu",
   "public": false,
   "icons": {
     "default": "img/logo.png"
   },
-  "targets": [
-    {
-      "id": "Microsoft.VisualStudio.Services"
-    }
+  "screenshots": [ ],
+   "categories": [
+    "Build and release"
   ],
   "tags": [
-    "Build, Release"
+    "utility", "tasks"
   ],
   "links": {
   },
@@ -25,29 +23,28 @@
     "color": "rgb(220, 235, 252)",
     "theme": "light"
   },
+  "content": {
+    "details": {
+      "path": "LiquibaseExtension/readme.md"
+    }
+  },
   "files": [
-    {
-      "path": "css"
-    },
-    {
-      "path": "img"
-    },
     {
       "path": "scripts"
     },
     {
       "path": "tasks"
-    },
-    {
-      "path": "index.html"
     }
   ],
-  "categories": [
-    "Integrate"
+  "scopes": [ "vso.work", "vso.code", "vso.build", "vso.packaging" ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
   ],
   "contributions": [
     {
-      "id": "version-task",
+      "id": "task-version",
       "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"
