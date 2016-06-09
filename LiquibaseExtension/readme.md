@@ -21,4 +21,13 @@ This has been updated to be inline with the [M95](https://www.visualstudio.com/e
 
 ####Thanks for choosing this project template.  Candid feedback is always welcome!
 
-Josh
+    {
+      "id": "task-version",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "tasks/TaskVersion"
+      }
+    }
