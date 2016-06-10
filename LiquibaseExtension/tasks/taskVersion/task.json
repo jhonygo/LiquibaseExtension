@@ -38,7 +38,7 @@
   ],
   "execution": {
     "Node": {
-      "target": "getVersion.js",
+      "target": "getVersion.ps1",
       "argumentFormat": ""
     },
     "PowerShell3": {

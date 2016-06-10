@@ -18,7 +18,9 @@
     "utility", "tasks"
   ],
   "links": {
-  },
+      "Source code": {
+        "uri" : "https://github.com/jhonygo/LiquibaseExtension" }
+    },
   "branding": {
     "color": "rgb(220, 235, 252)",
     "theme": "light"
