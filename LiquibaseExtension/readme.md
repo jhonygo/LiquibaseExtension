@@ -1,7 +1,11 @@
 #Liquibase extension for TFS/VSTS
 
-###This extension aims to provide build/release tasks for Liquibase runner.  This is a first version acting as a wrapper, without much semantic logic. Feel free to contribute if you have a better plan.  
+###Purpose  
   
+This extension aims to provide build/release tasks for Liquibase runner.  
+This is a first version acting as a wrapper, without much semantic logic. Feel free to contribute if you have a better plan : https://github.com/jhonygo/LiquibaseExtension
+  
+###Introduction to Liquibase framework  
 Liquibase is a database migration and configuration management tool. Here are some key features:  
   
 - Generate an initial state of a database structure  
@@ -11,10 +15,10 @@ Liquibase is a database migration and configuration management tool. Here are so
 - Automated SQL update/rollback scripts generation (JSON/Yaml/XML)  
   
 For details see [liquibase homepage](http://www.liquibase.org).  
-
-####Main logic  
   
-The Liquibase extension contains the liquibase framework (jar) and JDBC drivers for Sybase, SQL Server and Oracle DBMSes.  
+###Main logic  
+  
+The Liquibase extension contains the liquibase framework (java archive) and JDBC JTDS driver for Sybase/SQL Server DBMSes.  
 It allows to choose an action taken from a list of available liquibase commands against a given changelog package provided and a database connection.  
 Some additional options can be defined if needed.  
   
