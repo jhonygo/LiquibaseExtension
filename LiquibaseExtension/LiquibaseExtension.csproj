@@ -47,19 +47,9 @@
     <Content Include="css\app.css" />
     <Content Include="img\logo.png" />
     <Content Include="index.html" />
-    <Content Include="scripts\VSS.SDK.js" />
     <Content Include="tasks\TaskVersion\icon.png" />
-    <Content Include="tasks\TaskVersion\getVersion.js" />
-    <Content Include="test\TestSpec.js" />
     <None Include="readme.md" />
     <None Include="package.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="scripts\app.ts" />
-    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="typings\q\q.d.ts" />
-    <TypeScriptCompile Include="typings\knockout\knockout.d.ts" />
-    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="tasks\TaskVersion\getVersion.ps1" />
@@ -70,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="runtime\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />

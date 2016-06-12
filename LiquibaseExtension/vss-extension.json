@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "liquibase-extension",
   "name": "Liquibase Extension",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "publisher": "sedatguclu",
   "description": "Liquibase extension for TFS",
   "overview" : "Liquibase is a framework aimed to manage database changes in a tracked and reproducible manner.  For details see [Liquibase homepage](http://www.liquibase.org).",
@@ -32,10 +32,10 @@
   },
   "files": [
     {
-      "path": "scripts"
+      "path": "tasks"
     },
     {
-      "path": "tasks"
+      "path": "runtime"
     }
   ],
   "scopes": [ "vso.work", "vso.code", "vso.build", "vso.packaging" ],
