@@ -33,9 +33,6 @@
   "files": [
     {
       "path": "tasks"
-    },
-    {
-      "path": "runtime"
     }
   ],
   "scopes": [ "vso.work", "vso.code", "vso.build", "vso.packaging" ],
@@ -46,13 +43,13 @@
   ],
   "contributions": [
     {
-      "id": "task-version",
+      "id": "task-liquibase-execute",
       "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"
       ],
       "properties": {
-        "name": "LiquibaseExtension/tasks/TaskVersion"
+        "name": "LiquibaseExtension/tasks/TaskLiquibaseExecute"
       }
     }
   ]

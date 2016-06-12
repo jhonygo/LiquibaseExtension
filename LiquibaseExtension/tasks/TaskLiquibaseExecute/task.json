@@ -1,0 +1,48 @@
+{
+  "id": "b97ccb20-29bd-11e6-8829-d59d39f3c3c4",
+  "name": "TaskLiquibaseExecute",
+  "friendlyName": "Liquibase command execution",
+  "description": "Run Liquibase executable with given options",
+  "author": "sedatifpcdeboiron",
+  "helpMarkDown": "See [liquibase homepage](http://www.liquibase.org) for details",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "2"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "liquibaseVersion $(message)",
+  "inputs": [
+    {
+      "name": "changelog",
+      "type": "pathToChangelog",
+      "label": "Path to changelog file to execute",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Path to the liquibase changelog to perform commands against."
+    },
+    {
+      "name": "command",
+      "type": "string",
+      "label": "Liquibase Arguments",
+      "defaultValue": "--version",
+      "required": true,
+      "helpMarkDown": "Command to pass to the Liquibase executable"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "runtime/liquibase.bat",
+      "argumentFormat": ""
+    },
+    "PowerShell3": {
+      "target": "runtime/liquibase.bat"
+    }
+  }
+}
