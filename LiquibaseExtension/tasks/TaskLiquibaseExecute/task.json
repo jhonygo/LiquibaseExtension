@@ -17,32 +17,83 @@
     "Patch": "2"
   },
   "minimumAgentVersion": "1.95.0",
-  "instanceNameFormat": "liquibaseVersion $(message)",
+  "instanceNameFormat": "Run liquibase command $(message)",
+  "groups": [
+    {
+      "name": "common",
+      "displayName": "Common options",
+      "isExpanded": true
+    },
+    {
+      "name" : "commands",
+      "displayName": "Commands options",
+      "isExpanded" :  true
+    }
+  ],
   "inputs": [
     {
-      "name": "changelog",
-      "type": "pathToChangelog",
-      "label": "Path to changelog file to execute",
+      "name": "changeLogFile",
+      "type": "filePath",
+      "label": "Path to the changelog file to execute",
       "defaultValue": "",
-      "required": false,
-      "helpMarkDown": "Path to the liquibase changelog to perform commands against."
+      "required": true,
+      "helpMarkDown": "Path to the liquibase changelog to perform commands against.",
+      "groupName" :  "common"
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "Database username (must have sufficient privileges!)",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Database username (must have sufficient privileges!).",
+      "groupName" :  "common"    
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "label": "Database password",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Database password.",
+      "groupName" :  "common"
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "label": "Database URL",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Database URL (must match the JDBC format).",
+      "groupName" :  "common"
     },
     {
       "name": "command",
-      "type": "string",
-      "label": "Liquibase Arguments",
-      "defaultValue": "--version",
+      "type": "pickList",
+      "label": "Liquibase command to run",
+      "defaultValue": "status",
       "required": true,
-      "helpMarkDown": "Command to pass to the Liquibase executable"
+      "options": {
+        "rollbackTestingUpdate": "Performs update->rollback->update sequence",
+        "update": "Performs simple update",
+        "status": "Outputs count (list if --verbose) of unrun change sets."
+      },
+      "helpMarkDown": "The liquibase command to run. See [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
+      "groupName" :  "commands"
+    },
+        {
+      "name": "arguments",
+      "type": "string",
+      "label": "Arguments to pass to liquibase command",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Arguments to pass to liquibase command.",
+      "groupName" :  "commands"
     }
   ],
   "execution": {
-    "Node": {
-      "target": "runtime/liquibase.bat",
-      "argumentFormat": ""
-    },
     "PowerShell3": {
-      "target": "runtime/liquibase.bat"
+      "target": "liquibaseWrapper.ps1"
     }
   }
 }
