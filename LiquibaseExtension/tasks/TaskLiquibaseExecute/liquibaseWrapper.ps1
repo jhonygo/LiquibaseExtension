@@ -1,18 +1,21 @@
 [CmdletBinding()]
-param()
+param(
+  [string]$changeLogFile,
+  [string]$username,
+  [string]$password,
+  [string]$url,
+  [string]$command,
+  [string]$arguments
+)
 
 # For more information on the VSTS Task SDK:
-# https://github.com/Microsoft/vsts-task-lib
-Trace-VstsEnteringInvocation $MyInvocation
 try {
     # Set the working directory.
-    $cwd = Get-VstsInput -Name cwd -Require
-    Assert-VstsPath -LiteralPath $cwd -PathType Container
-    Write-Verbose "Setting working directory to '$cwd'."
-    Set-Location $cwd
+    #$cwd = Get-VstsInput -Name cwd -Require
+    #Assert-VstsPath -LiteralPath $cwd -PathType Container
+    #Write-Verbose "Setting working directory to '$cwd'."
+    #Set-Location $cwd
 
     # Output the message to the log.
-    Write-Host (Get-VstsInput -Name msg)
-} finally {
-    Trace-VstsLeavingInvocation $MyInvocation
-}
+    Write-Host (Get-VstsInput -Name $username)
+} finally {}
