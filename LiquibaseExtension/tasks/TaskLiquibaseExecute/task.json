@@ -92,8 +92,8 @@
     }
   ],
   "execution": {
-    "PowerShell3": {
-      "target": "liquibaseWrapper.ps1"
+    "PowerShell": {
+      "target": "$(currentDirectory)\liquibaseWrapper.ps1"
     }
   }
 }
