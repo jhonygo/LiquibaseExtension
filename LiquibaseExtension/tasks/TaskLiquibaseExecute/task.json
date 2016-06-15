@@ -17,7 +17,7 @@
     "Patch": "2"
   },
   "minimumAgentVersion": "1.95.0",
-  "instanceNameFormat": "Liquibase command",
+  "instanceNameFormat": "Liquibase command $command",
   "groups": [
     {
       "name": "common",
