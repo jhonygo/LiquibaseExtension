@@ -14,7 +14,7 @@ param(
 try {
 
     # Set the working directory.
-    #$cwd = Get-VstsInput -Name cwd -Require
+    #$cwd = Get-VstsInput -Name $=cwd -Require
     #Assert-VstsPath -LiteralPath $cwd -PathType Container
     #Write-Verbose "Setting working directory to '$cwd'."
     #Set-Location $cwd
