@@ -15,11 +15,13 @@ param(
   # CONSTANTS
   [string] $runtime = "liquibase.bat",
   [string] $driver = "net.sourceforge.jtds.jdbc.Driver"
+  # URL root
+  [string] $url = "jdbc:jtds:$(dbms)://$(hostname)"
+
 )
 
 try {
     # Set JDBC URL with all optional parameters if any
-    [string] $url = "jdbc:jtds:$(dbms)://$(hostname)"
     If ($port -ne 0) { 
       $url = "$(url):$(port)"
     }
