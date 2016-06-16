@@ -13,7 +13,7 @@ param(
   [string]$parameters,
   [string]$buildNumber = $env:BUILD_BUILDNUMBER,
   # CONSTANTS
-  [string]$runtime = "liquibase.bat"
+  [string]$runtime = "liquibase.bat",
   [string]$driver = "lib/jtds-1.3.1.jar"
 )
 
