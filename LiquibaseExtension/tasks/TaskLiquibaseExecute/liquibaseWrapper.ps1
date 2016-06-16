@@ -21,13 +21,13 @@ param(
 
 try {
     # Set JDBC URL with all optional parameters if any
-    If ($port -ne 0) { 
+    If (-Not $port) { 
       $url = "${url}:${port}"
     }
-    If (-Not $dbname -Match "") { 
+    If (-Not $dbname) { 
       $url = "${url}/${dbname}"
     }
-    If (-Not $databaseOptions -Match "") { 
+    If (-Not $databaseOptions) { 
       $url = "${url};${databaseOptions}"
     }
 
