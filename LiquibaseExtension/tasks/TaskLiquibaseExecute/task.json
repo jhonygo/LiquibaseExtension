@@ -94,7 +94,7 @@
       "type": "string",
       "label": "Database name",
       "defaultValue": "",
-      "required": true,
+      "required": false,
       "helpMarkDown": "Name of the database to update",
       "groupName" :  "connectOptions"
     },
