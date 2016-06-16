@@ -25,7 +25,7 @@ try {
     #Set-Location $cwd
     [string] $url="TODO CONSTRUCT URL DBMS/HOSTNAME(/PORT)(/DATABASEOPTIONS)"
     
-    Write "Executing '$runtime' --driver='$driver' --url='$url' --username='$username' --password='XXXXXXXX' '$command' '$parameters' " 
-    $A = Start-Process -FilePath '$runtime' --driver='$driver' --url='$url' --username='$username' --password='$password' '$command' '$parameters' -Wait -passthru;$a.ExitCode
+    Write "Executing $runtime --driver=$driver --url=$url --username=$username --password=XXXXXXXX $command $parameters" 
+    #$A = Start-Process -FilePath '$runtime' --driver='$driver' --url='$url' --username='$username' --password='$password' '$command' '$parameters' -Wait -passthru;$a.ExitCode
 
 } finally {}
