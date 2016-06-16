@@ -17,7 +17,7 @@
     "Patch": "2"
   },
   "minimumAgentVersion": "1.95.0",
-  "instanceNameFormat": "Liquibase command $command",
+  "instanceNameFormat": "Liquibase command $(command)",
   "groups": [
     {
       "name": "connectOptions",
@@ -44,7 +44,7 @@
       "name": "dbms",
       "type": "pickList",
       "label": "Database type",
-      "defaultValue": "status",
+      "defaultValue": "sybase",
       "required": true,
       "options": {
         "SYBASE": "sybase",
