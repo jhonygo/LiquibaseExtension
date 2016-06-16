@@ -14,10 +14,9 @@ param(
   [string] $buildNumber = $env:BUILD_BUILDNUMBER,
   # CONSTANTS
   [string] $runtime = "liquibase.bat",
-  [string] $driver = "net.sourceforge.jtds.jdbc.Driver"
+  [string] $driver = "net.sourceforge.jtds.jdbc.Driver",
   # URL root
   [string] $url = "jdbc:jtds:$(dbms)://$(hostname)"
-
 )
 
 try {
