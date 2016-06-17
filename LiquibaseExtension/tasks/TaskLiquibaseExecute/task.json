@@ -86,7 +86,7 @@
       "label": "Database listening port",
       "defaultValue": "",
       "required": false,
-      "helpMarkDown": "Listening port of the database to update. If empty, the default value used is 1433 for SQL Server and 7100 for Sybase",
+      "helpMarkDown": "Listening port of the database to update.\nIf empty, the default value used is 1433 for SQL Server and 7100 for Sybase",
       "groupName" :  "connectOptions"
     },
     {
@@ -113,7 +113,7 @@
       "label": "Liquibase command to run",
       "defaultValue": "listLocks",
       "required": true,
-      "helpMarkDown": "The liquibase command to run. See [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
+      "helpMarkDown": "The liquibase command to run.\nSee [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
       "groupName" :  "liquibaseOptions"
     },
         {
@@ -122,7 +122,7 @@
       "label": "Arguments to pass to the liquibase command",
       "defaultValue": "",
       "required": false,
-      "helpMarkDown": "Arguments to pass to liquibase command.",
+      "helpMarkDown": "Arguments to pass to liquibase command.\nSee [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
       "groupName" :  "liquibaseOptions"
     }
   ],
