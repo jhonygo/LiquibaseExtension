@@ -111,7 +111,7 @@
       "name": "command",
       "type": "string",
       "label": "Liquibase command to run",
-      "defaultValue": "listLocks",
+      "defaultValue": "validate",
       "required": true,
       "helpMarkDown": "The liquibase command to run.\nSee [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
       "groupName" :  "liquibaseOptions"
