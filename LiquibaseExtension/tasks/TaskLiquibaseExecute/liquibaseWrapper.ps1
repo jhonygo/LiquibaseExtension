@@ -19,7 +19,7 @@ param(
   [string] $url = "jdbc:jtds:${dbms}://${hostname}"
 )
 
-try {
+#try {
     # Set JDBC URL with all optional parameters if any
     If ($port) { 
       $url = "${url}:${port}"
@@ -33,9 +33,11 @@ try {
 
 	# Define the full command to execute
 	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=XXXXXXXX $command $parameters"
-	[string] $liquibaseCommand = "--driver=$driver --url=$url --username=$username --password=$password $command $parameters"
+	$liquibaseCommand = @("--driver=$driver", "--url=$url", "--username=$username", "--password=$password", "$command", "$parameters")
 	
-    Write "Executing $runtime $printableCommand"
-    Start-Process -FilePath $runtime -ArgumentList $liquibaseCommand -Wait -passthru
+    	Write "Executing $runtime $printableCommand"
+    	#Start-Process -FilePath $runtime -ArgumentList $liquibaseCommand -Wait -passthru
+	& $runtime $liquibaseCommand
+	exit $Lastexitcode
 
-} finally {}
+#} finally {}
