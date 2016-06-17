@@ -14,7 +14,7 @@ param(
   [string] $buildNumber = $env:BUILD_BUILDNUMBER,
   # CONSTANTS
   [string] $runtime = "liquibase.bat",
-  [string] $driver = "net.sourceforge.jtds.jdbc.Driver",
+  [string] $driver = 'net.sourceforge.jtds.jdbc.Driver',
   # URL root
   [string] $url = "jdbc:jtds:${dbms}://${hostname}"
 )
@@ -31,7 +31,11 @@ try {
       $url = "${url};${databaseOptions}"
     }
 
-    Write "Executing $runtime --driver=$driver --url=$url --username=$username --password=XXXXXXXX $command $parameters" 
-    $A = Start-Process -FilePath "$runtime" --driver="$driver" --url="$url" --username="$username" --password="$password" "$command" "$parameters" -Wait -passthru;$a.ExitCode
+	# Define the full command to execute
+	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=XXXXXXXX $command $parameters"
+	[string] $liquibaseCommand = "--driver=$driver --url=$url --username=$username --password=$password $command $parameters"
+	
+    Write "Executing $runtime $printableCommand"
+    Start-Process -FilePath $runtime -ArgumentList $liquibaseCommand -Wait -passthru
 
 } finally {}
