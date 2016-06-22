@@ -32,8 +32,8 @@ param(
     }
 
 	# Define the full command to execute
-	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=XXXXXXXX $command $parameters"
-	$liquibaseCommand = @("--driver=$driver", "--url=$url", "--username=$username", "--password=$password", "$command", "$parameters")
+	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=$password --changeLogFile=$changeLogFile $command $parameters"
+	$liquibaseCommand = @("--driver=$driver", "--url=$url", "--username=$username", "--password=$password", "--changeLogFile=$changeLogFile",  "$command", "$parameters")
 	
     	Write "Executing $runtime $printableCommand"
     	#Start-Process -FilePath $runtime -ArgumentList $liquibaseCommand -Wait -passthru
