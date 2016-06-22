@@ -65,10 +65,10 @@
     {
       "name": "password",
       "type": "string",
-      "label": "Database password",
+      "label": "Database password (use secured variable here!)",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "Database password.",
+      "helpMarkDown": "Database password (use secured variable here!)",
       "groupName" :  "connectOptions"
     },
     {
@@ -101,10 +101,10 @@
     {
       "name": "databaseOptions",
       "type": "string",
-      "label": "Database options using the format option=value and separated with ; ",
+      "label": "Database options",
       "defaultValue": "",
       "required": false,
-      "helpMarkDown": "Name of the database to update",
+      "helpMarkDown": "Database options based using the format 'option=value' and separated with ';' ",
       "groupName" :  "connectOptions"
     },    
     {
