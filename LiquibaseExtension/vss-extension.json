@@ -35,7 +35,7 @@
       "path": "tasks"
     }
   ],
-  "scopes": [ "vso.work", "vso.code", "vso.build", "vso.packaging" ],
+  "scopes": [ ],
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
