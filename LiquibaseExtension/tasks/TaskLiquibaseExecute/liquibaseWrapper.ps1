@@ -35,18 +35,19 @@ param(
 	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=$password --changeLogFile=$changeLogFile $command $parameters"
 	$liquibaseCommand = @("--driver=$driver", "--url=$url", "--username=$username", "--password=$password", "--changeLogFile=$changeLogFile",  "$command", "$parameters")
 	
-    	Write "Executing $runtime $printableCommand"
-
-	$cmdOutput = & $runtime $liquibaseCommand 2>&1 
-        if($Lastexitcode -eq 0) { 
-                $cmdOutput | where {$_.gettype().Name -ne "ErrorRecord"} | foreach { 
-                        Write-Host "$_" 
-                } 
-        } 
-        else { 
-                $cmdOutput = $cmdOutput | where {$_.gettype().Name -eq "ErrorRecord"} 
-                Write-Error "$cmdOutput" 
-        }
-	exit $Lastexitcode
+	
+    	Write-Host "Executing $runtime $printableCommand"
+    	#Start-Process -FilePath $runtime -ArgumentList $liquibaseCommand -Wait -passthru
+	$cmdOutput = & $runtime $liquibaseCommand 2>&1
+		
+	if($Lastexitcode -eq 0) {
+		$cmdOutput | where {$_.gettype().Name -ne "ErrorRecord"} | foreach {
+			Write-Host "$_"
+		}
+	}
+	else {
+		$cmdOutput = $cmdOutput | where {$_.gettype().Name -eq "ErrorRecord"}
+		Write-Error "$cmdOutput"
+	}
 
 #} finally {}
