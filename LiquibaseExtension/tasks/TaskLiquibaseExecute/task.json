@@ -49,7 +49,7 @@
       "options": {
         "SYBASE": "sybase",
         "MS SQL SERVER": "sqlserver",
-        "H2 (IN-FILE DB)": "h2" 
+        "H2": "h2" 
       },
       "helpMarkDown": "The type of the database to update.",
       "groupName" :  "connectOptions"
