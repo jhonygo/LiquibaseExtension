@@ -48,7 +48,8 @@
       "required": true,
       "options": {
         "SYBASE": "sybase",
-        "MS SQL SERVER" : "sqlserver"
+        "MS SQL SERVER": "sqlserver",
+        "H2 (IN-FILE DB)": "h2" 
       },
       "helpMarkDown": "The type of the database to update.",
       "groupName" :  "connectOptions"
@@ -74,10 +75,10 @@
     {
       "name": "hostname",
       "type": "string",
-      "label": "Database hostname",
+      "label": "Database hostname (filename for H2)",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "IP/FQDN of the server hosting the database to update.",
+      "helpMarkDown": "IP/FQDN of the server hosting the database to update. N.B. : put the filename here if using H2 file-based database",
       "groupName" :  "connectOptions"
     },
     {

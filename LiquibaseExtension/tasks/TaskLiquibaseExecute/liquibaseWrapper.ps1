@@ -16,22 +16,28 @@ param(
   # CONSTANTS
   [string] $runtime = "runtime\liquibase.bat",
   [string] $driver = 'net.sourceforge.jtds.jdbc.Driver',
-  # URL root
-  [string] $url = "jdbc:jtds:${dbms}://${hostname}"
+  [string] $url = ""
 )
 
 #try {
-    # Set JDBC URL with all optional parameters if any
-    If ($port) { 
-      $url = "${url}:${port}"
-    }
-    If ($dbname) { 
-      $url = "${url}/${dbname}"
-    }
-    If ($databaseOptions) { 
-      $url = "${url};${databaseOptions}"
-    }
+  # Set JDBC URL with all optional parameters if any
+  If (${dbms} = "h2") {
+	    # URL root
+	  	$url = "jdbc:h2:file:${hostname}"
+	  } Else {
+		# URL root
+		$url = "jdbc:jtds:${dbms}://${hostname}"
 
+		If ($port) { 
+		  $url = "${url}:${port}"
+		}
+		If ($dbname) { 
+		  $url = "${url}/${dbname}"
+		}
+		If ($databaseOptions) { 
+		  $url = "${url};${databaseOptions}"
+		}
+	}
 	# Define the full command to execute
 	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=$password --changeLogFile=$changeLogFile $parameters $command $commandOptions"
 	$liquibaseCommand = @("--driver=$driver", "--url=$url", "--username=$username", "--password=$password", "--changeLogFile=$changeLogFile", "$parameters", "$command", "$commandOptions")

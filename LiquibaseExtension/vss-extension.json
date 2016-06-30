@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "liquibase-extension",
   "name": "Liquibase Extension",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "sedatifpcdeboiron",
   "description": "Liquibase extension for TFS",
   "overview" : "Liquibase is a framework aimed to manage database changes in a tracked and reproducible manner.  For details see [Liquibase homepage](http://www.liquibase.org).",
