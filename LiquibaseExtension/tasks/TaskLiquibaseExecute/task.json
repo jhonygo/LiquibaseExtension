@@ -105,8 +105,17 @@
       "defaultValue": "",
       "required": false,
       "helpMarkDown": "Database options based using the format 'option=value' and separated with ';' ",
-      "groupName" :  "connectOptions"
-    },    
+      "groupName": "connectOptions"
+    },   
+    {
+      "name": "parameters",
+      "type": "string",
+      "label": "Liquibase parameters passed before the commands to execute, usually in the form --param=value",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Liquibase Parameters passed before the command to execute, usually defined as --param=value.\nSee [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
+      "groupName" :  "liquibaseOptions"
+    },
     {
       "name": "command",
       "type": "string",
@@ -116,13 +125,13 @@
       "helpMarkDown": "The liquibase command to run.\nSee [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
       "groupName" :  "liquibaseOptions"
     },
-        {
-      "name": "parameters",
+    {
+      "name": "commandOptions",
       "type": "string",
-      "label": "Arguments to pass to the liquibase command",
+      "label": "Options specific to the liquibase command if any",
       "defaultValue": "",
       "required": false,
-      "helpMarkDown": "Arguments to pass to liquibase command.\nSee [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
+      "helpMarkDown": "Options specific to the Liquibase command if any.\nSee [documentation](http://www.liquibase.org/documentation/command_line.html) for details",
       "groupName" :  "liquibaseOptions"
     }
   ],

@@ -9,8 +9,9 @@ param(
   [string] $port,
   [string] $dbname,  
   [string] $databaseOptions,
-  [string] [Parameter(Mandatory=$true)] [ValidateNotNullOrEmpty()] $command,   
   [string] $parameters,
+  [string] [Parameter(Mandatory=$true)] [ValidateNotNullOrEmpty()] $command,   
+  [string] $commandOptions,
   [string] $buildNumber = $env:BUILD_BUILDNUMBER,
   # CONSTANTS
   [string] $runtime = "runtime\liquibase.bat",
@@ -32,8 +33,8 @@ param(
     }
 
 	# Define the full command to execute
-	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=$password --changeLogFile=$changeLogFile $parameters $command"
-	$liquibaseCommand = @("--driver=$driver", "--url=$url", "--username=$username", "--password=$password", "--changeLogFile=$changeLogFile", "$parameters", "$command")
+	[string] $printableCommand = "--driver=$driver --url=$url --username=$username --password=$password --changeLogFile=$changeLogFile $parameters $command $commandOptions"
+	$liquibaseCommand = @("--driver=$driver", "--url=$url", "--username=$username", "--password=$password", "--changeLogFile=$changeLogFile", "$parameters", "$command", "$commandOptions")
 	
     	Write-Host "Executing $runtime $printableCommand"
     	#Start-Process -FilePath $runtime -ArgumentList $liquibaseCommand -Wait -passthru

@@ -47,32 +47,23 @@
     <Content Include="css\app.css" />
     <Content Include="img\logo.png" />
     <Content Include="index.html" />
-    <Content Include="tasks\TaskLiquibaseExecute\autre.png" />
     <Content Include="tasks\TaskLiquibaseExecute\icon.png" />
+    <Content Include="tasks\TaskLiquibaseExecute\runtime\lib\h2-1.3.160.jar" />
     <Content Include="tasks\TaskLiquibaseExecute\runtime\lib\jtds-1.3.1.jar" />
     <Content Include="tasks\TaskLiquibaseExecute\runtime\lib\snakeyaml-1.13.jar" />
-    <Content Include="tasks\TaskLiquibaseExecute\runtime\LICENSE.txt" />
     <Content Include="tasks\TaskLiquibaseExecute\runtime\liquibase.jar" />
-    <Content Include="tasks\TaskLiquibaseExecute\runtime\README.txt" />
-    <Content Include="tasks\TaskVersion\icon.png" />
     <None Include="readme.md" />
     <None Include="package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="tasks\TaskVersion\getVersion.ps1" />
-    <Content Include="tasks\TaskVersion\task.json" />
     <Content Include="tasks\TaskLiquibaseExecute\liquibaseWrapper.ps1" />
-    <Content Include="tasks\TaskLiquibaseExecute\runtime\liquibase" />
     <Content Include="tasks\TaskLiquibaseExecute\runtime\liquibase.bat" />
-    <Content Include="tasks\TaskLiquibaseExecute\runtime\liquibase.spec" />
     <Content Include="tasks\TaskLiquibaseExecute\task.json" />
     <None Include="vss-extension.json" />
     <None Include="settings.tfx.json" />
     <None Include="gruntfile.js" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="runtime\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
