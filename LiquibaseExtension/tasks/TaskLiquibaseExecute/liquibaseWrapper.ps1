@@ -21,7 +21,7 @@ param(
 
 #try {
   # Set JDBC URL and driver with all optional parameters if any
-  If (${dbms} = "h2") {
+  If (${dbms} -eq "h2") {
 	    $driver = 'org.h2.Driver'
 	  	$url = "jdbc:h2:file:${hostname}"
 	  } Else {
