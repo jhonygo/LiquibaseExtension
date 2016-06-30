@@ -15,17 +15,17 @@ param(
   [string] $buildNumber = $env:BUILD_BUILDNUMBER,
   # CONSTANTS
   [string] $runtime = "runtime\liquibase.bat",
-  [string] $driver = 'net.sourceforge.jtds.jdbc.Driver',
+  [string] $driver = "",
   [string] $url = ""
 )
 
 #try {
-  # Set JDBC URL with all optional parameters if any
+  # Set JDBC URL and driver with all optional parameters if any
   If (${dbms} = "h2") {
-	    # URL root
+	    $driver = 'org.h2.Driver'
 	  	$url = "jdbc:h2:file:${hostname}"
 	  } Else {
-		# URL root
+		$driver = 'net.sourceforge.jtds.jdbc.Driver'
 		$url = "jdbc:jtds:${dbms}://${hostname}"
 
 		If ($port) { 
