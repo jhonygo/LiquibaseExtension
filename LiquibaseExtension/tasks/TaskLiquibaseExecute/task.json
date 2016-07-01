@@ -34,10 +34,10 @@
     {
       "name": "changeLogFile",
       "type": "filePath",
-      "label": "Path to the changelog file to execute",
+      "label": "Path to the changelog file to apply/generate",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "Path to the liquibase changelog to perform commands against.",
+      "helpMarkDown": "Path to the liquibase changelog to apply/generate.",
       "groupName" :  "connectOptions"
     },
     {
